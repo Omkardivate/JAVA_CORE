@@ -25,8 +25,12 @@ public class ArrayOperations {
         }
     }
 
-	public static int[][] addOfArray(int[][] a,int[][] b)
+	public static int[][] addOfArray(int[][] a)
     {
+		int[][] b = new int[3][3];
+		System.out.println("Enter array 2 to add in array 1:");
+		ArrayOperations.accept(b);
+		
     	int[][] temp=new int[a.length][a[0].length];
     	for(int i=0;i<a.length;i++)
         {
@@ -93,7 +97,7 @@ public class ArrayOperations {
 	
 	public static void menu()
     {
-    	System.out.println("1. Addition of 2 array");
+    	System.out.println("\n1. Addition of 2 array");
     	System.out.println("2. Transpose");
     	System.out.println("3. Min. number from 2D array");
     	System.out.println("4. Max. number from 2D array");
