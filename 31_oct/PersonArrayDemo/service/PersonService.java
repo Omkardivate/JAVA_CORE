@@ -2,7 +2,8 @@ package com.demo.service;
 
 import com.demo.beans.Person;
 
-public interface PersonService {
+public interface PersonService 
+{
 
 	void addNewPerson();
 
