@@ -5,17 +5,16 @@ public class Person implements Comparable<Person>{
 	private String pname;
 	private String mobile;
 	private String email;
+	
 	public Person() {
 		//System.out.println("in person default constructor");
-		
 	}
+	
 	public Person(int id) {
 		this.pid=id;
 		
 	}
-	public boolean equals(Object ob) {
-		return this.pid==((Person)ob).pid;
-	}
+	
 	public Person(int pid, String pname, String mobile, String email) {
 		//System.out.println("in person paremterised  constructor");
 		this.pid = pid;
@@ -51,6 +50,12 @@ public class Person implements Comparable<Person>{
 	public String toString() {
 		return "Person [pid=" + pid + ", pname=" + pname + ", mobile=" + mobile + ", email=" + email + "]";
 	}
+	
+	@Override
+	public boolean equals(Object ob) {  // for indexOf()
+		return this.pid==((Person)ob).pid;
+	}
+	
 	@Override
 	public int compareTo(Person o) {
 		System.out.println("In Person compareTo Method "+this.pname+"----"+o.pname);

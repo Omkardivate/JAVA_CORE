@@ -28,16 +28,16 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		return  elist;
 	}
 	@Override
-	public Employee getById(int id) {
-		int pos=elist.indexOf(new SalariedEmp(id));
+	public Employee getById(int id) {                 // .indexOf(object)
+		int pos=elist.indexOf(new SalariedEmp(id));  //uses .equals() to override
 		if(pos!=-1) {
 			return elist.get(pos);
 		}
 		return null;
 	}
 	@Override
-	public boolean removeById(int id) {
-		return elist.remove(new SalariedEmp(id));
+	public boolean removeById(int id) {  
+		return elist.remove(new SalariedEmp(id));  // .remove(object)
 	}
 	@Override
 	public boolean updateSalById(int id, double sal) {
@@ -48,7 +48,8 @@ public class EmployeeDaoImpl implements EmployeeDao{
 			}
 			else if (e instanceof ContractEmployee) {
 				((ContractEmployee) e).setCharges(sal);
-			}else {
+			}
+			else {
 				//vendor
 			}
 			return true;
@@ -61,9 +62,11 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		for(Employee e:elist) {
 			elst.add(e);
 		}
+		
 		//Collections.copy( elst,elist);
 		//Collections.sort(elst,null);
-		elst.sort(null);
+		
+		elst.sort(null); //override .compareTo()
 		return elst;
 		
 	}

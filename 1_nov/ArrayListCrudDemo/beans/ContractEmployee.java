@@ -4,11 +4,18 @@ import java.time.LocalDate;
 public class ContractEmployee extends Employee{
 	private int hrs;
 	private double charges;
+	
 	public ContractEmployee() {
 		super();
 	}
-	public ContractEmployee(int pid, String pname, String mobile, String email,String dept, String desg, LocalDate doj,int hrs, double charges) {
-		super(pid,pname,mobile,email,dept,desg,doj);
+	
+//	public ContractEmployee(int id) {
+//		super(id);
+//	}
+
+	public ContractEmployee(int pid, String pname, String mobile, String email, String dept, String desg, LocalDate doj,
+			int hrs, double charges) {
+		super(pid, pname, mobile, email, dept, desg, doj);
 		this.hrs = hrs;
 		this.charges = charges;
 	}
