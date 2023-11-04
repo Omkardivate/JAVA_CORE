@@ -31,7 +31,7 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	}
 	@Override
 	public Employee getById(int id) {
-		int pos=elist.indexOf(new SalariedEmp(id));
+		int pos=elist.indexOf(new SalariedEmp(id));  //uses equals()
 		if(pos!=-1) {
 			return elist.get(pos);
 		}
@@ -39,7 +39,7 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	}
 	@Override
 	public boolean removeById(int id) {
-		return elist.remove(new SalariedEmp(id));
+		return elist.remove(new SalariedEmp(id)); //uses equals()
 	}
 	@Override
 	public boolean updateSalById(int id, double sal) {
@@ -65,7 +65,7 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		}
 		//Collections.copy( elst,elist);
 		//Collections.sort(elst,null);
-		elst.sort(null);
+		elst.sort(null);   // Comparable -> compareTo()
 		return elst;
 		
 	}
