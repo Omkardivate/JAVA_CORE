@@ -24,7 +24,7 @@ public class Person implements Comparable<Person>{
 	}
 		
 	@Override
-	public boolean equals(Object obj) {
+	public boolean equals(Object obj) {          // for indexOf() , remove()
 		System.out.println("in person equals method--->"+this.pid+"-----"+((Person)obj).pid);
 		return this.pid==((Person)obj).pid; //&& this.pname.equals(((Person)obj).pname);
 		
@@ -32,8 +32,8 @@ public class Person implements Comparable<Person>{
 		
 	}
 	@Override
-	public int hashCode() {
-		System.out.println("in person hashCode method--->"+this.pid);
+	public int hashCode() {                                                 // for HashSet
+		System.out.println("in person hashCode method--->"+this.pid);   
 		return this.pid;
 	}
 	
@@ -67,7 +67,7 @@ public class Person implements Comparable<Person>{
 		return "pid: "+this.pid+"\nName: "+this.pname+"\nMobile: "+this.mobile;
 	}
 	@Override
-	public int compareTo(Person o) {
+	public int compareTo(Person o) {                 //for sort(nll)
 		return this.pname.compareTo(o.pname);
 	}
 
