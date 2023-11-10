@@ -10,7 +10,6 @@ public class Person {
 		super();
 	}
 	public Person(int pid, String pname, Gender g) {
-		super();
 		this.pid = pid;
 		this.pname = pname;
 		this.g = g;
